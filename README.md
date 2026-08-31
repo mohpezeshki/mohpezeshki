@@ -6,15 +6,24 @@
 
 ### Hi, I'm Mohammad 👋
 
-I build machine learning systems and the plumbing that keeps them running — training pipelines, evaluation harnesses, and API clients that turn messy external data into something a model can actually use.
+I build machine learning systems and ship them as working products — not just notebooks. Most of what's here follows the same arc: train a model, then wrap it in a FastAPI backend and a React frontend so someone can actually use it.
 
-Lately I've been working on **high-energy physics classification**, reproducing the Baldi et al. (2014) deep-learning-vs-boosted-trees comparison on the UCI HIGGS dataset, and on **applied vision + LLM tooling** for plant identification and care.
+Recently that's meant a **local-first voice dictation tool** running faster-whisper in-process, a **playlist-embedding recommender** trained on 12.9M track-playlist pairs, and a **deep-learning-vs-boosted-trees comparison** on 11M simulated particle collisions.
 
-I care about reproducibility. Every project here ships with pinned dependencies, a documented pipeline, and results you can regenerate from a clean clone.
+I care about reproducibility. Pinned dependencies, seeded runs, and a documented path from raw data to results on a clean clone.
 
 <br>
 
 ### Selected work
+
+**Full-stack ML applications**
+
+| Project | What it is |
+| :--- | :--- |
+| **[Speak Fill](https://github.com/mohpezeshki/speak-fill)** | Build a form, then fill it by talking. Audio streams as raw PCM over a WebSocket to a local faster-whisper model — no API key, no external service — and an LLM maps free-form speech onto the right fields. FastAPI + React 19, installable as a single `speakfill` command. |
+| **[Spotify Song Recommendation](https://github.com/mohpezeshki/Spotify-Song-Recommendation)** | Word2Vec trained on playlists-as-sentences: 157K playlist sequences, a 2.7M-track vocabulary, recommendations by cosine similarity in embedding space. Fuzzy search via Postgres trigram indexes, enriched with live cover art and Spotify links. |
+
+**Modeling and data**
 
 | Project | What it is |
 | :--- | :--- |
@@ -26,14 +35,27 @@ I care about reproducibility. Every project here ships with pinned dependencies,
 
 ### Toolbox
 
+**ML**
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![XGBoost](https://img.shields.io/badge/XGBoost-337AB7?style=for-the-badge&logo=xgboost&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-337AB7?style=for-the-badge)
+![gensim](https://img.shields.io/badge/gensim-4B5563?style=for-the-badge)
+![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+
+**Data**
 ![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=sqlalchemy&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+
+**Shipping**
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![uv](https://img.shields.io/badge/uv-DE5FE9?style=for-the-badge&logo=uv&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
 <br>
@@ -43,33 +65,22 @@ I care about reproducibility. Every project here ships with pinned dependencies,
 
 <br>
 
-- **Baselines before architecture.** A tuned XGBoost run tells you whether the problem is hard or your features are. It also tends to win more often than people expect.
+- **Baselines before architecture.** A tuned XGBoost run tells you whether the problem is hard or your features are. It also wins more often than people expect — it did on the Higgs data.
 - **Metrics that match the domain.** Accuracy hides a model that misses two-thirds of the positive class. Physics has AMS; every domain has something better than the default.
-- **Reproducible or it didn't happen.** `uv.lock`, seeded runs, checkpoints, and a `main.py` that goes from raw data to plots in one command.
-- **Notebooks explore, modules ship.** Exploration lives in `notebooks/`, but anything that runs twice moves into `src/`.
+- **Local-first where it's possible.** Speak Fill runs speech-to-text in-process rather than calling out to a paid API. Fewer keys, fewer failure modes, no data leaving the machine.
+- **Notebooks explore, modules ship.** Exploration lives in `notebooks/`; anything that runs twice moves into `src/` with a CLI entry point.
+- **Write the architecture down.** If a design decision took an afternoon to reach, it's worth a paragraph in `ARCHITECTURE.md`.
 
 </details>
 
-<br>
-
-### GitHub stats
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=mohpezeshki&show_icons=true&hide_border=true&theme=github_dark&icon_color=2dd4bf&title_color=818cf8">
-  <img alt="GitHub stats" src="https://github-readme-stats.vercel.app/api?username=mohpezeshki&show_icons=true&hide_border=true&title_color=4f46e5&icon_color=0d9488">
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=mohpezeshki&layout=compact&hide_border=true&theme=github_dark&title_color=818cf8">
-  <img alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mohpezeshki&layout=compact&hide_border=true&title_color=4f46e5">
-</picture>
-
-<br>
 <br>
 
 ### Get in touch
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohammad-pezeshki94/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mohpezeshki)
+&nbsp;
+![Followers](https://img.shields.io/github/followers/mohpezeshki?style=for-the-badge&logo=github&label=Followers&labelColor=181717&color=2dd4bf)
+![Stars](https://img.shields.io/github/stars/mohpezeshki?affiliations=OWNER&style=for-the-badge&logo=github&label=Stars&labelColor=181717&color=818cf8)
 
-Open to conversations about applied ML, scientific computing, and anything involving a dataset large enough to be annoying.
+Open to conversations about applied ML, speech and language tooling, and anything involving a dataset large enough to be annoying.
