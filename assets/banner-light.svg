@@ -39,18 +39,15 @@
       <circle cx="1090" cy="206" r="3.5"/><circle cx="1150" cy="140" r="3"/>
     </g>
 
-    <rect x="72" y="92" width="4" height="116" rx="2" fill="url(#accentL)"/>
+    <rect x="72" y="98" width="4" height="104" rx="2" fill="url(#accentL)"/>
 
-    <text x="104" y="124" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+    <text x="104" y="128" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
           font-size="18" letter-spacing="4.5" font-weight="600" fill="#0d9488">AI / MACHINE LEARNING ENGINEER</text>
 
-    <text x="102" y="184" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+    <text x="102" y="188" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
           font-size="55" font-weight="700" fill="#1f2328">Mohammad Pezeshki</text>
 
-    <text x="104" y="218" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
-          font-size="19" fill="#57606a">Deep learning, computer vision, and LLM systems built to ship.</text>
-
-    <text x="104" y="246" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
-          font-size="16" fill="#6e7681">Researcher · IRI UL, University of Ljubljana</text>
+    <text x="104" y="224" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+          font-size="19" fill="#57606a">Deep learning, LLM systems, and computer vision — built to ship.</text>
   </g>
 </svg>
