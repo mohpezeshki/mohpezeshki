@@ -64,19 +64,6 @@ I also work on decision-making under uncertainty — Markov Decision Processes a
 <br>
 
 <details>
-<summary><b>How I work</b></summary>
-
-<br>
-
-- **Baselines before architecture.** A tuned gradient-boosting run tells you whether the problem is hard or your features are. It wins more often than people expect.
-- **Evaluate properly.** For retrieval that means recall@k, nDCG, and MRR on a real relevance set; for classification, metrics that match the domain rather than accuracy hiding a model that misses two-thirds of the positive class.
-- **Constrain the model's output.** Structured JSON schemas, explicit null contracts for low-confidence values, and parsing that survives whatever the model actually returns.
-- **Local-first where it's practical.** Running speech-to-text or a 7B model in-process means fewer keys, fewer failure modes, and no data leaving the machine.
-- **Notebooks explore, modules ship.** Exploration lives in `notebooks/`; anything that runs twice moves into `src/` with an entry point and pinned dependencies.
-
-</details>
-
-<details>
 <summary><b>Background</b></summary>
 
 <br>
