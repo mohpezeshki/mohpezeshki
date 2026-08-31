@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="Mohammad Pezeshki — machine learning and data science">
+  <defs>
+    <linearGradient id="bgD" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="55%" stop-color="#131a26"/>
+      <stop offset="100%" stop-color="#0f1a1d"/>
+    </linearGradient>
+    <linearGradient id="accentD" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2dd4bf"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <radialGradient id="glowD" cx="0.78" cy="0.35" r="0.6">
+      <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="clipD"><rect width="1200" height="300" rx="14"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#clipD)">
+    <rect width="1200" height="300" fill="url(#bgD)"/>
+    <rect width="1200" height="300" fill="url(#glowD)"/>
+
+    <!-- faint grid -->
+    <g stroke="#8b949e" stroke-opacity="0.07" stroke-width="1">
+      <path d="M0 60h1200M0 120h1200M0 180h1200M0 240h1200"/>
+      <path d="M660 0v300M760 0v300M860 0v300M960 0v300M1060 0v300M1160 0v300"/>
+    </g>
+
+    <!-- decision curve -->
+    <path d="M660 250 C 780 250, 800 120, 880 96 C 960 72, 1050 66, 1160 60"
+          fill="none" stroke="url(#accentD)" stroke-opacity="0.55" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- scatter: two classes -->
+    <g fill="#2dd4bf" fill-opacity="0.75">
+      <circle cx="702" cy="228" r="4"/><circle cx="744" cy="196" r="3"/><circle cx="781" cy="214" r="4.5"/>
+      <circle cx="812" cy="168" r="3"/><circle cx="852" cy="186" r="4"/><circle cx="893" cy="152" r="3.5"/>
+      <circle cx="726" cy="252" r="3"/><circle cx="838" cy="228" r="3"/><circle cx="770" cy="164" r="3"/>
+    </g>
+    <g fill="#818cf8" fill-opacity="0.75">
+      <circle cx="940" cy="112" r="4"/><circle cx="982" cy="84" r="3"/><circle cx="1016" cy="120" r="4.5"/>
+      <circle cx="1058" cy="76" r="3.5"/><circle cx="1092" cy="104" r="4"/><circle cx="1128" cy="70" r="3"/>
+      <circle cx="968" cy="140" r="3"/><circle cx="1050" cy="132" r="3"/><circle cx="1112" cy="132" r="3"/>
+    </g>
+
+    <!-- accent bar -->
+    <rect x="72" y="96" width="4" height="108" rx="2" fill="url(#accentD)"/>
+
+    <text x="104" y="128" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+          font-size="19" letter-spacing="4.5" font-weight="600" fill="#2dd4bf">MACHINE LEARNING · DATA SCIENCE</text>
+
+    <text x="102" y="188" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+          font-size="56" font-weight="700" fill="#e6edf3">Mohammad Pezeshki</text>
+
+    <text x="104" y="224" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+          font-size="20" fill="#8b949e">Neural networks, gradient boosting, and the data pipelines behind them.</text>
+  </g>
+</svg>
