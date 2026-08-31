@@ -4,7 +4,7 @@
   <img alt="Mohammad Pezeshki — AI / Machine Learning Engineer" src="./assets/banner-light.svg">
 </picture>
 
-### Hi, I'm Mohammad 👋
+### Hi, I'm Mohammad
 
 AI/ML engineer with a software-engineering foundation. I work across the full path from model to product: training and fine-tuning deep learning models, building LLM-backed systems with retrieval and structured outputs, and deploying them as real services rather than leaving them in notebooks.
 
