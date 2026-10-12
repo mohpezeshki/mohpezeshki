@@ -15,7 +15,14 @@ AI/ML engineer with a software-engineering foundation. I work across the full pa
 - **Classical ML** — gradient boosting, embedding models, and the unglamorous baselines that tell you whether a neural network is even worth training.
 - **Production engineering** — FastAPI, WebSockets, Postgres, Docker, and React frontends, so the model reaches a user.
 
-I also work on decision-making under uncertainty — Markov Decision Processes and Bayesian methods — in a research context.
+Currently a researcher at the Institute for Innovation and Development of the University of Ljubljana (IRI UL), building AI components for EU-funded projects.
+
+<br>
+
+### Research
+
+- **ExtremeXP** (EU decision-support project) — an MDP-based framework in Python for automated, adaptive experiment design, treating experimentation as sequential decision-making under uncertainty. It extends my Master's thesis.
+- **Swarmchestrate** (EU-funded) — the Trust Management System for a decentralized orchestration framework across the Cloud-to-Edge continuum. It combines a multidimensional trust model (identity, behavioral, contextual) with two scoring algorithms: a deterministic weighted sum and a Bayesian model (Beta distribution with adaptive EWMA) that quantifies uncertainty. Blockchain-based identity (DIDs / VCs) produces tamper-evident, signed trust credentials.
 
 <br>
 
@@ -25,15 +32,16 @@ I also work on decision-making under uncertainty — Markov Decision Processes a
 
 | Project | What it is |
 | :--- | :--- |
-| **[Speak Fill](https://github.com/mohpezeshki/speak-fill)** | Voice-dictated form filling. The browser streams 16 kHz PCM over a WebSocket to a FastAPI backend running faster-whisper in-process, reconstructing an interim/final transcript contract through polled re-transcription with bounded chunk commits. An LLM maps free-form speech onto an arbitrary form schema as `{field_key: value}` JSON, with an explicit null contract for low-confidence values and anti-cross-fill constraints. Runs against GPT-4o-mini or a local Qwen2.5-7B-Instruct behind one provider flag. |
+| **[Speak Fill](https://github.com/mohpezeshki/speak-fill)** | Voice-dictated form filling. The browser streams 16 kHz PCM over a WebSocket to a FastAPI backend running faster-whisper in-process, reconstructing an interim/final transcript contract through polled re-transcription with bounded chunk commits. An LLM maps free-form speech onto an arbitrary form schema as `{field_key: value}` JSON, with an explicit null contract for low-confidence values and anti-cross-fill constraints. Runs against GPT-4o-mini or a local Qwen2.5-7B-Instruct behind one provider flag. Ships as one installable Python package serving the API and a React 19 + TypeScript frontend, with SQLite or Postgres and optional Docker Compose. |
+| **[TSDAE + SBERT on PubMed](https://github.com/mohpezeshki/tsdae-sbert-pubmed)** | Tests whether unsupervised TSDAE domain adaptation on unlabeled PubMed sentences improves biomedical sentence embeddings. Four models (plain BERT, TSDAE only, NLI only, TSDAE then NLI) are compared on PubMed title→abstract retrieval, NanoBEIR (SciFact, NFCorpus, SCIDOCS) and STSb. In an early run TSDAE alone lifted PubMed nDCG@10 from 0.04 to 0.29 over untrained BERT, but TSDAE before NLI did not beat NLI alone. The pipeline has since been corrected (decoder cross-attention training, matched NLI ordering) and rerun results are pending. |
 | **[Spotify Song Recommendation](https://github.com/mohpezeshki/Spotify-Song-Recommendation)** | Word2Vec trained on playlists-as-sentences — 157K playlist sequences, a 2.7M-track vocabulary, recommendations by cosine similarity in embedding space. Postgres trigram search, live metadata enrichment, React 19 + Tailwind frontend. |
-| **[Plant Identifier & AI Care Assistant](https://github.com/mohpezeshki/Plant-identifier-and-ai-care-assistant)** | A fine-tuned EfficientNet identifies 50 houseplant species; an LLM generates location- and season-aware care advice with Pydantic-structured outputs, hallucination guardrails, and response caching. Deployed on Hugging Face Spaces. |
+| **[Plant Identifier & AI Care Assistant](https://github.com/mohpezeshki/Plant-identifier-and-ai-care-assistant)** | Identifies 47 houseplant species with a transfer-learned MobileNetV2 (81.4% validation accuracy, selected over EfficientNet-B0, ResNet50 and a from-scratch ResNet9 on the same split) and rejects low-confidence images. Qwen2.5-3B-Instruct turns the top-3 predictions, location and season into a structured JSON care plan, retrying on invalid JSON. FastAPI streams results to the browser over Server-Sent Events. |
 
-**Modeling and data**
+**Modeling and tooling**
 
 | Project | What it is |
 | :--- | :--- |
-| **[Higgs Boson Detection](https://github.com/mohpezeshki/Higgs-Boson-Detection)** | Deep feedforward network vs XGBoost on the UCI HIGGS dataset (28 features, 11M events). XGBoost led on AUC (0.81 vs 0.74) and calibration (Brier 0.18 vs 0.26); the network won on recall (0.77 vs 0.32) and F1 (0.76 vs 0.48) — a clean illustration of the precision/recall trade-off between model families. |
+| **[Higgs Boson Detection](https://github.com/mohpezeshki/Higgs-Boson-Detection)** | Deep feedforward network vs XGBoost on the UCI HIGGS dataset (28 features, 11M events; trained and evaluated on an 88K/10K/10K train/validation/test subsample). XGBoost led on AUC (0.81 vs 0.74) and calibration (Brier 0.18 vs 0.26); the network won on recall (0.77 vs 0.32) and F1 (0.76 vs 0.48) — a clean illustration of the precision/recall trade-off between model families. |
 | **[LinkedIn Scraper](https://github.com/mohpezeshki/Linkedin-Scraper)** | Python client covering 45 endpoints of the Fresh LinkedIn Scraper API — jobs, profiles, companies, posts, ads, groups — with input validation on every category. |
 
 <br>
